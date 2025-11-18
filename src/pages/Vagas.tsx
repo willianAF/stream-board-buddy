@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { QueueRow } from '@/models/QueueRow';
+import type { QueueRow } from '@/models/QueueRow';
 import { Button } from 'primereact/button';
 import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { AddPlayerDialog } from '@/components/AddPlayerDialog';

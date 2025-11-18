@@ -1,6 +1,6 @@
-import { Message, MessageList } from '@/models/Message';
-import { CreateMessage } from '@/models/CreateMessage';
-import { UpdateMessage } from '@/models/UpdateMessage';
+import type { Message, MessageList } from '@/models/Message';
+import type { CreateMessage } from '@/models/CreateMessage';
+import type { UpdateMessage } from '@/models/UpdateMessage';
 import { useStreamerBotClient } from '@/hooks/useStreamerBotClient';
 
 export function useMessageService() {
