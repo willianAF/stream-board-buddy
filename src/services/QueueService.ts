@@ -1,4 +1,4 @@
-import { QueueRow, QueueList } from '@/models/QueueRow';
+import type { QueueRow, QueueList } from '@/models/QueueRow';
 import { useStreamerBotClient } from '@/hooks/useStreamerBotClient';
 
 export function useQueueService() {

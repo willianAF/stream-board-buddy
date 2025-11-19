@@ -1,6 +1,5 @@
-import { MessageSquare, Briefcase, Palette } from 'lucide-react';
+import { MessageSquare, Briefcase } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
-import { Button } from '@/components/ui/button';
 
 export function Sidebar() {
   const navItems = [

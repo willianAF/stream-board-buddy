@@ -3,8 +3,8 @@ import { Dialog } from 'primereact/dialog';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 import { InputSwitch } from 'primereact/inputswitch';
-import { UpdateMessage } from '@/models/UpdateMessage';
-import { CreateMessage } from '@/models/CreateMessage';
+import type { UpdateMessage } from '@/models/UpdateMessage';
+import type { CreateMessage } from '@/models/CreateMessage';
 
 interface MessageDialogProps {
   visible: boolean;

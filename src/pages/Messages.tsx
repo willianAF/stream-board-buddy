@@ -5,10 +5,10 @@ import { Button } from 'primereact/button';
 import { MessageDialog } from '@/components/MessageDialog';
 import { ConfirmDialog } from '@/components/ConfirmDialog';
 import { useToast } from '@/hooks/use-toast';
-import { Message } from '@/models/Message';
+import type { Message } from '@/models/Message';
 import React from 'react';
-import { CreateMessage } from '@/models/CreateMessage';
-import { UpdateMessage } from '@/models/UpdateMessage';
+import type { CreateMessage } from '@/models/CreateMessage';
+import type { UpdateMessage } from '@/models/UpdateMessage';
 import { useMessageService } from '@/services/MessageService';
 
 export default function Messages() {
@@ -31,7 +31,7 @@ export default function Messages() {
     try {
       const data = await getMessages();
       setMessages(data);
-    } catch (error) {
+    } catch {
       toast({
         title: 'Erro',
         description: 'Falha ao carregar mensagens',
@@ -73,7 +73,7 @@ export default function Messages() {
         });
       }
       await loadMessages();
-    } catch (error) {
+    } catch {
       toast({
         title: 'Erro',
         description: 'Falha ao salvar mensagem',
@@ -92,7 +92,7 @@ export default function Messages() {
         description: 'Mensagem excluída com sucesso'
       });
       await loadMessages();
-    } catch (error) {
+    } catch {
       toast({
         title: 'Erro',
         description: 'Falha ao excluir mensagem',
