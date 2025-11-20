@@ -31,3 +31,28 @@ O frontend ficará disponível em http://localhost:5174 (conforme vite.config.ts
 
 - StreamerBot deve estar rodando localmente no PC do streamer (o projeto assume comunicação via cliente configurado em useStreamerBotClient).
 - Node.js e npm instalados.
+
+## Integração com StreamerBot
+
+Este projeto utiliza Actions personalizadas do StreamerBot para permitir operações como criar, editar e excluir mensagens, além de gerenciar a fila de players.
+
+O código C# das Actions e os arquivos de exportação (`*.export.txt`) estão localizados em:
+
+```
+streamerbot/actions/
+```
+
+Cada domínio (ex.: `messages`, `PlayerQueue`) possui:
+
+* Código C# correspondente
+* Um arquivo `.export.txt` para importação no StreamerBot
+* Um README próprio que explica como importar e usar
+
+> ⚠ **Importante:** após importar uma Action no StreamerBot, garanta que **Action**, **Triggers** e **Commands** estejam marcados como **Enabled**, ou nada será executado.
+
+Para detalhes completos, consulte o README da pasta:
+
+```
+streamerbot/actions/README.md
+```
+
